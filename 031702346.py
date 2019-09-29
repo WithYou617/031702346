@@ -99,14 +99,18 @@ def main(inxx):
         str=str.replace(province,"",1)
 
     city=get_city(str)
-  
-    str=str.replace(city,"",1)
-  
+    str=str.replace(city, "", 1)
+    if (city[-1] != "市") and (city[-3:-1] != "自治"):
+        city=city+"市"
 
     county = get_county(str)
-    
+    if county!= "":
+       l= len(county)
+    if county[-1] == county[L-1]:
+        str = str.replace(county, "", 1)
+    else:
+        str=str.replace(county[:-1], "", 1)
     str = str.replace(county, "", 1)
-    
    
     town=get_town(str)
     str=str.replace(town,"",1)
