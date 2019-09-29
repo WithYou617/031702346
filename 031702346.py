@@ -99,7 +99,7 @@ def main(inxx):
 
     city=get_city(str)
     if city!= "":
-    str=str.replace(city,"",1)
+        str=str.replace(city,"",1)
     if (city[-1] != "市") and (city[-3:-1] != "自治"):
         city = city+"市"
 
