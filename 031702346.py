@@ -37,13 +37,13 @@ def get_county(string):            #获得县
     return str.group()
 
 def get_town(string):         #获得城镇
-    str=re.search("(.*?[镇乡])|(.*?街道)",string)
+    str=re.search("(.*?[镇乡])|(.*?街道)|(.*?民族乡)|(.*?苏木)",string)
     if str==None:
         return ""
     return str.group()
 
 def get_road(string): #获得路
-    str=re.search("(.*?[路街巷道胡同])",string)
+    str=re.search("(.*?[路街巷道胡同]|(.*?胡同)|(.*?弄)",string)
     if str==None:
         return ""
     return str.group()
@@ -141,3 +141,4 @@ while True:
     if(input1=='END'):
         break;
     main(input1)
+
