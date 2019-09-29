@@ -110,7 +110,7 @@ def main(inxx):
         str = str.replace(county, "", 1)
     else:
         str = str.replace(county[:-1], "", 1)
-    county=get_county(str)
+   
     town=get_town(str)
     str=str.replace(town,"",1)
     five=str
