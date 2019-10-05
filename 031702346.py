@@ -39,7 +39,7 @@ def get_county(str):
     return flag.group()
 
 def get_town(str):
-    flag = re.search("(.*?[镇乡])|(.*?街道)|(.*?苏木)|(.*?开发区)|(.*?合作区)|(.*?管委会)|(.*?园区)", str)
+    flag = re.search("(.*?[镇乡])|(.*?街道)|(.*?苏木)|(.*?开发区)|(.*?合作区)|(.*?管委会)|(.*?园区)|(.*?社区)", str)
     if flag == None:
         return ""
     return flag.group()
